@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0;
+    font-family: 'Nova Square' cursive;
+}
+
+body {
+    background-color: powderblue;
+}
+
+.start-button, 
+.rules-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Start Quiz Button Styling */
+.start-button button {
+    font-size: 25px;
+    font-weight: 500;
+    color: lightslategray;
+    padding: 15px 30px;
+    outline: none;
+    border-color: none;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.rules-box {
+    display: none;
+    width: 540px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.rules-box .rules-title {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.rules-box .rules-list {
+    padding: 15px 35px;
+}
+
+.rules-box .rules-list .rules {
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.rules span {
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+.rules-box .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px solid lightgray;
+}
+
+.rules-box .buttons button {
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.buttons button.quit {
+    color: powderblue;
+    border-color: powderblue;
+}
+
+.buttons button.quit:hover {
+background: powderblue;
+}
+
+.buttons button.restart {
+    color: #fff;
+    background: powderblue;
+}
+.buttons button.restart:hover {
+    background: powderblue;
+    }
+
+.title {
+    color: rgb(252, 8, 8);
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.time {
+    color: rgb(252, 8, 8);
+    font-size: 36px;
+    font-weight: 500;
+    position: absolute;
+    top: .05cm;
+    right: .5cm;
+}
