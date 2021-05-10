@@ -82,7 +82,7 @@ function submitHighscore() {
     var highscore = {initials, totalSeconds};
     highscores.push(highscore);
     localStorage.setItem('highscores', JSON.stringify(highscores));
-    document.getElementById("sumbitscore").style.display = "none"
+    document.getElementById("sumbitscore").style.display = "none";
     viewHighscores();
 }
 

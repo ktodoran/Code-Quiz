@@ -170,7 +170,7 @@ background: purple;
     background: white;
     border-radius: 5px;
 }
-.highscorebutton {
+.viewscores button {
     background: none;
     border: none;
     padding: 0;
@@ -178,6 +178,15 @@ background: purple;
     color: #069;
     text-decoration: underline;
     cursor: pointer;
+    font-size: 25px;
+    font-weight: 500;
+    color: lightslategray;
+    padding: 15px 30px;
+    outline: none;
+    border-color: none;
+    border-radius: 5px;
+    background: #fff;
+    
 }
 .finalscores {
     display: none;
@@ -185,6 +194,6 @@ background: purple;
     margin-right: auto;
     width: 8em
 }
-.finalscores ul {
+.finalscores li {
     
 }
