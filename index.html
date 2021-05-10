@@ -23,7 +23,7 @@
         <div class="time" >Time Left:  <span id="timeleft">75</span></div>
 </div>
 <!--View Highscore Link-->
-<div class="'viewscores">
+<div class="viewscores">
     <button class = "highscorebutton" onclick="viewHighscores()">View Highscores</button>
 </div>
 
@@ -48,17 +48,17 @@
 <section class="boxes" id="que-text">
     <div id="que_one">
     <h1>Question 1</h1>
-    <h2>What year did Disneyland open?</h2>
-        <button class="defaultbuttonstyle" onclick="submitAnswer(1)">A. 1953</button>
-        <button class="defaultbuttonstyle" onclick="submitAnswer(1)">B. 1956</button>
-        <button class="defaultbuttonstyle" onclick="submitAnswer(1)">C. 1962</button>
-        <button class="defaultbuttonstyle" onclick="submitAnswer(1, true)">D. 1955</button>
+    <h2>Commonly used data types DO NOT include:</h2>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(1)">A. strings</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(1)">B. booleans</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(1)">C. alerts</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(1, true)">D. numbers</button>
     </div>
     <div id="que_two" style="display:none">
     <h1>Question 2</h1>
-    <h2>What is the name of the Toy Store in Toy Story 2?</h2>
-        <button class="defaultbuttonstyle" onclick="submitAnswer(2)">A. Monjo's Toys</button>
-        <button class="defaultbuttonstyle" onclick="submitAnswer(2)">B. Kids Wonders</button>
+    <h2>Arrays in JavaScript can be used to store  _______.</h2>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(2)">A. numbers and strings</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(2)">B. other arrays</button>
         <button class="defaultbuttonstyle" onclick="submitAnswer(2, true)">C. Al's Toy Barn</button>
         <button class="defaultbuttonstyle" onclick="submitAnswer(2)">D. Toys R' US</button>
     </div>
@@ -95,8 +95,11 @@
 </section>
 
 <section class="finalscores" id="finalscores">
-    <h1>Highscores</h1>
+    <h1>High Scores</h1>
         <li class="allscores" id="scorelist"></li>
+        <button class="defaultbuttonstyle" onclick="startOver()">Go Back!</button>
+        <button class="defaultbuttonstyle" onclick="deleteScores()">Clear Highscores!</button>
+
 </section>
 </body>
 </html>

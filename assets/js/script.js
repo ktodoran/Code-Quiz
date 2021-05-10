@@ -20,6 +20,7 @@ function countdownTimer() {
 //Show Rules List Function
 function showRules() {
     var rulesList = document.getElementById("rulesdiv");
+        document.getElementById("start-page").style.display = "none";
         rulesList.style.display = "block";
 }
 //Start Questions Function
@@ -29,13 +30,13 @@ function startQuiz() {
     document.getElementById("que-text").style.display = "block";
     countdownInterval = setInterval(countdownTimer, 1000);
 }
-
+//Don't take the Quiz; After reading rules
 function goBack() {
     document.getElementById("rulesdiv").style.display = "none";
     document.getElementById("que-text").style.display = "none";
     document.getElementById("start-page").style.display = "block";
 }
-
+//Submission of Answers
 function submitAnswer(question, correct) {
     if (!correct) {
         var temporarySeconds = totalSeconds - 10;
@@ -71,7 +72,7 @@ function submitAnswer(question, correct) {
     
 }
 }
-
+//End of Quiz/Submitting Highscore to localStorage
 function submitHighscore() {
     var result = localStorage.getItem('highscores');
     var highscores = [];
@@ -98,4 +99,14 @@ function viewHighscores() {
     for (let index = 0; index < highscores.length; index++) {
         document.getElementById("scorelist").innerHTML += '<li>' + highscores[index].initials + "  " + highscores[index].totalSeconds  +   '<li>'
     }
+}
+//Going Back to Main Menu after Submitting Initials or Clearing Highscores
+function startOver() {
+    document.getElementById("finalscores").style.display = "none";
+    document.getElementById("start-page").style.display = "block";
+}
+
+function deleteScores() {
+    var itemToRemove = document.getElementById("scorelist");
+    itemToRemove.parentNode.removeChild("scorelist");
 }
