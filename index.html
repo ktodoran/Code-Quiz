@@ -14,19 +14,21 @@
 <script src="./assets/js/script.js"></script>
 
 <!--Timer Box-->
-<div class="container">
-    <header>
-        <div class="title">Disney Trivia!</div>
-        <div class="timer">
-            <div class="time" >Time Left:  <span id="timeleft">75</span></div>
-            
-        </div>
-    </header>
-</div>
+<div class="container" id="start-page">
+    <div class="title">Disney Trivia!</div> 
 <!--Original Prompt to Start Quiz and Show Rules-->
-<div class="start-button" onclick="showRules()"><button>Are You Ready?</button></div>
+<div class="start-button" onclick="showRules()"><button>Are You Ready?</button></div> 
+</div>
+<div class="timer">
+        <div class="time" >Time Left:  <span id="timeleft">75</span></div>
+</div>
+<!--View Highscore Link-->
+<div>
+    <button class = "highscorebutton" onclick="viewHighscores()">View Highscores</button>
+</div>
 
-<div class="rules-box" id="rulesdiv">
+
+<div class="boxes" id="rulesdiv">
     <div class="rules-title">
         <span>The Rules!</span>
     </div>
@@ -38,52 +40,63 @@
         <div class="rules">5. Good Luck!</div>
     </div>
     <div class="buttons">
-        <button class="quit">I'll Pass!!</button>
-    <button class="restart" onclick="startQuiz()">Let's Do It!</button>
+        <button class="defaultbuttonstyle" onclick="goBack()">I'll Pass!!</button>
+    <button class="defaultbuttonstyle" onclick="startQuiz()">Let's Do It!</button>
     </div>
 </div>
 <!--Questions-->
-<section class="questions" id="que-text">
+<section class="boxes" id="que-text">
     <div id="que_one">
     <h1>Question 1</h1>
     <h2>What year did Disneyland open?</h2>
-        <button class="options" onclick="submitAnswer(1)">A. 1953</button>
-        <button class="options" onclick="submitAnswer(1)">B. 1956</button>
-        <button class="options" onclick="submitAnswer(1)">C. 1962</button>
-        <button class="options" onclick="submitAnswer(1, true)">D. 1955</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(1)">A. 1953</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(1)">B. 1956</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(1)">C. 1962</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(1, true)">D. 1955</button>
     </div>
     <div id="que_two" style="display:none">
     <h1>Question 2</h1>
     <h2>What is the name of the Toy Store in Toy Story 2?</h2>
-        <button class="options" onclick="submitAnswer(2)">A. Monjo's Toys</button>
-        <button class="options" onclick="submitAnswer(2)">B. Kids Wonders</button>
-        <button class="options" onclick="submitAnswer(2, true)">C. Al's Toy Barn</button>
-        <button class="options" onclick="submitAnswer(2)">D. Toys R' US</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(2)">A. Monjo's Toys</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(2)">B. Kids Wonders</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(2, true)">C. Al's Toy Barn</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(2)">D. Toys R' US</button>
     </div>
     <div id="que_three" style="display:none">
     <h1 >Question 3</h1>
-    <h2>What are the names of Hades\' minions in Hercules</h2>
-        <button class="options" onclick="submitAnswer(3, true)">A. Pain and Panic</button>
-        <button class="options" onclick="submitAnswer(3)">B. Timon and Pumba</button>
-        <button class="options" onclick="submitAnswer(3)">C. Mickey and Donald</button>
-        <button class="options" onclick="submitAnswer(3)">D. Ren and Stimpy</button>
+    <h2>What are the names of Hades' minions in Hercules</h2>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(3, true)">A. Pain and Panic</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(3)">B. Timon and Pumba</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(3)">C. Mickey and Donald</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(3)">D. Ren and Stimpy</button>
     </div>
     <div id="que_four" style="display:none">
     <h1>Question 4</h1>
     <h2>Which is NOT the name of one of the seven dwarfs in Snow White?</h2>
-        <button class="options" onclick="submitAnswer(4)">A. Doc</button>
-        <button class="options" onclick="submitAnswer(4)">B. Sleepy</button>
-        <button class="options" onclick="submitAnswer(4)">C. Happy</button>
-        <button class="options" onclick="submitAnswer(4, true)">D. Angry</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(4)">A. Doc</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(4)">B. Sleepy</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(4)">C. Happy</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(4, true)">D. Angry</button>
     </div>
     <div id="que_five" style="display:none">
     <h1>Question 5</h1>
     <h2>How long was Genie stuck in his lamp before Aladdin found him?</h2>
-        <button class="options" onclick="submitAnswer(5)">A. 5 minutes</button>
-        <button class="options" onclick="submitAnswer(5, true)">B. 10,000 years</button>
-        <button class="options" onclick="submitAnswer(5)">C. 150 years</button>
-        <button class="options" onclick="submitAnswer(5)">D. 13 hours</button>
-    </div>                
+        <button class="defaultbuttonstyle" onclick="submitAnswer(5)">A. 5 minutes</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(5, true)">B. 10,000 years</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(5)">C. 150 years</button>
+        <button class="defaultbuttonstyle" onclick="submitAnswer(5)">D. 13 hours</button>
+    </div>               
+</section>
+<section class="highscore" type="text" id="sumbitscore">
+    <h1>Game Over</h1>
+    <h2 id="score"></h2>
+        <input type="text" id="initials">Enter Your Initials</input>
+        <button id="submit" onclick="submitHighscore()">Submit</button>
+</section>
+
+<section class="finalscores" id="finalscores">
+    <h1>Highscores</h1>
+        <ul class="allscores" id="scorelist"></ul>
 </section>
 </body>
 </html>

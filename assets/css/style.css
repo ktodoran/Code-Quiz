@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 * {
     box-sizing: border-box;
     margin: 0%;
     padding: 0;
-    font-family: 'Nova Square' cursive;
 }
 
 body {
@@ -11,7 +9,7 @@ body {
 }
 
 .start-button, 
-.rules-box {
+.boxes {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,14 +29,14 @@ body {
     cursor: pointer;
 }
 
-.rules-box {
+.boxes {
     display: none;
     width: 540px;
     background: #fff;
     border-radius: 5px;
 }
 
-.rules-box .rules-title {
+.boxes .rules-title {
     height: 60px;
     width: 100%;
     border-bottom: 1px solid lightgray;
@@ -49,11 +47,11 @@ body {
     font-weight: 500;
 }
 
-.rules-box .rules-list {
+.boxes .rules-list {
     padding: 15px 35px;
 }
 
-.rules-box .rules-list .rules {
+.boxes .rules-list .rules {
     margin: 5px 0;
     font-size: 17px;
 }
@@ -63,7 +61,12 @@ body {
     color: lightseagreen;
 }
 
-.rules-box .buttons {
+.boxes h1 {
+    font-family: fantasy;
+    font-size: 36px;
+}
+
+.boxes .buttons {
     height: 60px;
     display: flex;
     align-items: center;
@@ -72,7 +75,7 @@ body {
     border-top: 1px solid lightgray;
 }
 
-.rules-box .buttons button {
+.defaultbuttonstyle {
     margin: 0 5px;
     height: 40px;
     width: 100px;
@@ -84,22 +87,22 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.buttons button.quit {
+.defaultbuttonstyle {
     color: white;
     border-color: powderblue;
     background-color: red;
 }
 
-.buttons button.quit:hover {
-background: powderblue;
+.defaultbuttonstyle:hover {
+background: purple;
 }
 
-.buttons button.restart {
+.defaultbuttonstyle {
     color: #fff;
     background: red;
 }
-.buttons button.restart:hover {
-    background: powderblue;
+.defaultbuttonstyle:hover {
+    background: purple;
     }
 
 .title {
@@ -150,23 +153,38 @@ background: powderblue;
     font-size: 17px;
 }
 
-.questions button {
-    margin: 0 5px;
-    display: block;
-    height: 40px;
-    width: 100px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
+.highscore {
+    color: black;
+    font-size: 36px;
     font-weight: 500;
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.highscore {
+    display: none;
+    width: 540px;
+    background: white;
+    border-radius: 5px;
+}
+.highscorebutton {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: arial, sans-serif;
+    color: #069;
+    text-decoration: underline;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
-.questions button.options {
-    color: blue;
-    background: powderblue;
+.finalscores {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em
 }
-button.options:hover {
-    background: purple;
+.finalscores ul {
+    
 }
