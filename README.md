@@ -7,7 +7,9 @@
 Link to website: https://ktodoran.github.io/Code-Quiz/
 
 This is a landing page for my second created Javascript file, a Code Quiz!
-If you want to test your knowledge on Javascript and see how fast you can answer these questions, then this is for you!
+If you want to test your knowledge on Javascript, then this is for you!
+
+Race the clock to answer these questions as quick as you can, save your highscore, and tell you friends to try and beat your time! Good luck!
 
 There is a screenshot of the layout provided above! Feel free to take a look at its layout!
 
